@@ -1,0 +1,191 @@
+.graph {
+  background-image: url("/images/graph/graph-bg.png");
+}
+
+@media (min-width: 1051px) {
+  .main-space {
+    display: flex;
+    flex-direction: row;
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+  }
+  .results-table {
+    margin: 30px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-right: 30px;
+    margin-left: 50px;
+  }
+}
+
+
+
+@media (min-width: 885px) and (max-width: 1050px) {
+  .main-space {
+    display: flex;
+    flex-direction: column;
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+  }
+  .results-table {
+    margin-bottom: 30px;
+   }
+  .form {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 884px) {
+  .main-space {
+    display: flex;
+    flex-direction: column;
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+  }
+  .results-table {
+    margin-bottom: 30px;
+  }
+  .form {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+h2 {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2em;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  color: #ff6600;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-area, .graph-area, .results-area {
+  background: rgba(255, 102, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 32%;
+  position: relative;
+  overflow: hidden;
+}
+
+.x-check-points, .r-check-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.x-check-points label, .r-check-points label {
+  margin: 5px;
+  background: rgba(255, 102, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
+  color: #ff6600;
+}
+
+.x-check-points label:hover, .r-check-points label:hover {
+  background: rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+}
+
+input[type="checkbox"]:disabled {
+  visibility: hidden;
+  position: absolute;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 102, 0, 0.2);
+  color: #ff6600;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  background: rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+  outline: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.results-table {
+  margin-top: 20px;
+  width: 100%;
+  height: 55vh;
+  overflow: auto;
+}
+.videoPlayer{
+  margin: auto;
+  height: 80%;
+  width: 80%;
+  display: none;
+}
+
+
+.main-space::before {
+  position: absolute;
+  content: "";
+  width: 100vh;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+  pointer-events: none;
+}

@@ -1,0 +1,25 @@
+<div class="user-profile">
+  <p>Пользователь: {{username}}</p>
+  <div class="top-table">
+    <table id="t-table">
+      <thead>
+      <tr>
+        <th>Пользователь</th>
+        <th>Выжил</th>
+        <th>Умер</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.username }}</td>
+        <td>{{ item.alive }}</td>
+        <td>{{ item.died }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>ID: {{id}}</p>
+  <div class="logout-button">
+    <button id="logout" type="submit" (click)="exitClick()">Выйти</button>
+  </div>
+</div>

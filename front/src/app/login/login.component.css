@@ -1,0 +1,133 @@
+body {
+  background-image: url("/images/graph/graph-bg.png");
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #ff6600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.8);
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  background: rgba(255, 102, 0, 0.2);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #ff6600;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.toggle-button.active {
+  background: rgba(255, 102, 0, 0.5);
+  color: #fff;
+}
+
+.toggle-button:hover {
+  background: rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+}
+
+.form-fields {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.login, .registration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.login.active, .registration.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2em;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  color: #ff6600;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+input[type="text"], input[type="password"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 102, 0, 0.2);
+  color: #ff6600;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  background: rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+  outline: none;
+}
+
+.login-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 102, 0, 0.5);
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+  background: rgba(255, 102, 0, 0.7);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.9);
+}

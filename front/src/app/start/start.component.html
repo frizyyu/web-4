@@ -1,0 +1,23 @@
+<div class="statisctic-main">
+  <h2>Топ пользователей</h2>
+  <div class="top-table">
+    <table id="t-table">
+      <thead>
+      <tr>
+        <th>Пользователь</th>
+        <th>Выжил</th>
+        <th>Умер</th>
+        <th>Счёт</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.username }}</td>
+        <td>{{ item.alive }}</td>
+        <td>{{ item.died }}</td>
+        <td>{{ item.score }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
